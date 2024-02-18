@@ -72,22 +72,3 @@ const carsSlice = createSlice({
 });
 
 export const catalogReducer = carsSlice.reducer;
-
-
-
-
-// .addCase(toggleFavorite.pending, handlePending)
-//       .addCase(toggleFavorite.fulfilled, (state, action) => {
-//         state.isLoading = false;
-//         state.error = null;
-//         // const toggleItem = state.catalog.find(item => item.id === action.payload.id);
-//         //   toggleItem.completed = !toggleItem.completed
-
-//         state.catalog = state.catalog.map(item => {
-//           if (item.id === action.payload.id) {
-//             item.completed = !item.completed;
-//           }
-//           return item;
-//         });
-//       })
-//       .addCase(toggleFavorite.rejected, handleRejected)

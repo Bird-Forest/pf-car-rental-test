@@ -6,13 +6,11 @@ export const FilterBar = styled.div`
   left: 0;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   width: 859px;
   height: 74px;
   padding: 0;
-  margin: 0 auto 50px auto;
-  /* @media screen and (min-width: 768px) {
-    height: 80px;
-  } */
+  margin: 0 auto;
 `;
 export const TitleFilter = styled.h4`
   font-family: 'Manrope';
@@ -32,9 +30,22 @@ export const FilterForm = styled.form`
 `;
 export const WrapSelect = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 14px;
   background: rgb(247, 247, 251);
   padding: 12px 18px 16px 18px;
+  .text {
+    width: 40px;
+    height: 20px;
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.11;
+    text-align: left;
+    padding: 4px 0 0 2px;
+    margin: 0;
+  }
 `;
 export const SelectBrand = styled.select`
   position: relative;
@@ -53,14 +64,6 @@ export const SelectBrand = styled.select`
   line-height: 1.11;
   text-align: left;
   cursor: pointer;
-  /* .brand {
-    width: 224px;
-    height: 20px;
-  }
-  .price {
-    width: 90px;
-    height: 20px;
-  } */
 `;
 export const OptionForm = styled.option`
   position: absolute;
@@ -74,24 +77,13 @@ export const OptionForm = styled.option`
   padding: 18px;
   color: rgba(18, 20, 23, 0.2);
   margin: 50px 0 0 0;
-  /* -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none; */
-  /* .brand {
-    width: 224px;
-    height: 236px;
-  }
-  .price {
-    width: 90px;
-    height: 160px;
-  } */
 `;
 export const SelectPrice = styled.select`
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 125px;
+  width: 80px;
   height: 20px;
   outline: rgb(247, 247, 251);
   border: none;
@@ -101,40 +93,27 @@ export const SelectPrice = styled.select`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.11;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 `;
-export const WrapMileage = styled.div`
+export const BtnClear = styled.button`
+  width: 136px;
+  height: 48px;
   display: flex;
-  border-radius: 14px;
-  background: rgb(247, 247, 251);
-  padding: 12px 18px 16px 18px;
-  .text {
-    width: 44px;
-    height: 20px;
-    color: rgb(18, 20, 23);
-    font-family: 'Manrope';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.11;
-    text-align: left;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 44px 14px 44px;
+  color: rgb(255, 255, 255);
+  font-family: ' Manrope';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.42;
+  border-radius: 12px;
+  background-color: rgb(52, 112, 255);
+  cursor: pointer;
+  &:hover,
+  :focus {
+    background: rgb(11, 68, 205);
   }
-`;
-export const SelectMileage = styled.select`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 68px;
-  height: 20px;
-  outline: rgb(247, 247, 251);
-  border: none;
-  background-color: rgb(247, 247, 251);
-  color: rgb(18, 20, 23);
-  font-family: 'Manrope';
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.11;
-  text-align: left;
-  cursor: pointer;
 `;

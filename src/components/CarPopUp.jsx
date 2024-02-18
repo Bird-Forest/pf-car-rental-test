@@ -21,7 +21,7 @@ export default function CarPopUp({ item, onClose }) {
         onClose();
       }
     };
-
+    // document.body.style.overflow = 'visible';
     // window.addEventListener('click', onClose);
     window.addEventListener('keydown', handleEscape);
 
@@ -88,10 +88,13 @@ export default function CarPopUp({ item, onClose }) {
           <div className="wrap-rent">
             <p className="text-rent last">{driver[2]}</p>
             <p className="text-rent">
-              Mileage<span className="blue">: {item.mileage}</span>
+              Mileage
+              <span className="blue">
+                : {(item.mileage * 0.001).toLocaleString()}
+              </span>
             </p>
             <p className="text-rent">
-              Price<span className="blue">: {item.rentalPrice}</span>
+              Price<span className="blue">: {item.rentalPrice}$</span>
             </p>
           </div>
         </WrapRent>

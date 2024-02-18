@@ -11,7 +11,7 @@ export const Backdrop = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   backdrop-filter: blur(4px);
   background: rgba(18, 20, 23, 0.5);
 `;
@@ -78,7 +78,6 @@ export const TextPopUp = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* margin: 2px 0; */
   padding: 0px;
   .text {
     color: rgba(18, 20, 23, 0.5);
@@ -111,7 +110,6 @@ export const WrapDescript = styled.div`
     font-size: 14px;
     font-weight: 500;
     line-height: 1.43;
-    letter-spacing: 0%;
     text-align: left;
     font-style: normal;
     overflow: hidden;

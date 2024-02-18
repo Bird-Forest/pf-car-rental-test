@@ -17,7 +17,7 @@ export const selectVisibleCars = createSelector(
       catalog = catalog.filter(item => item.make.includes(filter.brand));
     }
     if (filter.price !== null) {
-      catalog = catalog.filter(item => item.rentalPrice.includes(filter.price));
+      catalog = catalog.filter(item => item.rentalPrice <= filter.price);
     }
     return catalog;
   }

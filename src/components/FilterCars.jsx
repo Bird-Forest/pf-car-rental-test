@@ -1,20 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCatalog } from '../redux/selectors';
+import { selectCatalog, selectFilter } from '../redux/selectors';
 import {
+  BtnClear,
   FilterBar,
   FilterForm,
   OptionForm,
   SelectBrand,
-  SelectMileage,
   SelectPrice,
   TitleFilter,
-  WrapMileage,
   WrapSelect,
 } from './Filter.styled';
 import { setBrand, setPrice } from '../redux/filterSlice';
 
-function getCategories(items, itemName) {
+function getCategoriesString(items, itemName) {
   if (!items) return [];
   return items.reduce((acc, item) => {
     if (!acc.includes(item[itemName])) acc.push(item[itemName]);
@@ -22,12 +21,18 @@ function getCategories(items, itemName) {
   }, []);
 }
 
+function getCategoriesNumber(items, itemName) {
+  if (!items) return [];
+  return items.reduce((acc, item) => {
+    if (!acc.includes(item[itemName])) acc.push(item[itemName]);
+    return acc.sort((a, b) => a - b);
+  }, []);
+}
+
 export default function FilterCars() {
   const catalog = useSelector(selectCatalog);
-  const brand = getCategories(catalog, 'make');
-  const price = getCategories(catalog, 'rentalPrice');
-  const mileageFrom = [0, 2000, 4000, 6000, 8000];
-  const mileageTo = [2000, 4000, 6000, 8000, 10000];
+  const brand = getCategoriesString(catalog, 'make');
+  const price = getCategoriesNumber(catalog, 'rentalPrice');
 
   const dispatch = useDispatch();
 
@@ -41,12 +46,28 @@ export default function FilterCars() {
     }
   };
 
+  const filter = useSelector(selectFilter);
+
+  const clearFilter = filter => {
+    filter = {
+      brand: ' ',
+      price: ' ',
+    };
+    dispatch(setBrand(null));
+    dispatch(setPrice(null));
+  };
+
   return (
     <FilterBar>
       <FilterForm>
         <TitleFilter htmlFor="brand">Car brand</TitleFilter>
         <WrapSelect>
-          <SelectBrand id="brand" name="brand" onChange={handleOnChangeFilter}>
+          <SelectBrand
+            id="brand"
+            name="brand"
+            value={filter.brand || ' '}
+            onChange={handleOnChangeFilter}
+          >
             <OptionForm value="">Enter the text</OptionForm>
             {brand.map(option => (
               <OptionForm key={option} value={option}>
@@ -59,48 +80,23 @@ export default function FilterCars() {
       <FilterForm>
         <TitleFilter htmlFor="price">Price/ 1 hour</TitleFilter>
         <WrapSelect>
-          <SelectPrice id="price" name="price" onChange={handleOnChangeFilter}>
-            <OptionForm value="">To$</OptionForm>
+          <p className="text">To</p>
+          <SelectPrice
+            id="price"
+            name="price"
+            value={filter.price || ' '}
+            onChange={handleOnChangeFilter}
+          >
+            <OptionForm value="">$</OptionForm>
             {price.map(option => (
               <OptionForm key={option} value={option}>
-                {option}
+                {option}$
               </OptionForm>
             ))}
           </SelectPrice>
         </WrapSelect>
       </FilterForm>
-      <FilterForm>
-        <TitleFilter>Сar mileage / km</TitleFilter>
-        <WrapMileage>
-          <p className="text">From</p>
-          <SelectMileage
-            id=" mileageFrom"
-            name="mileageFrom"
-            onChange={handleOnChangeFilter}
-          >
-            {/* <OptionForm value="">From</OptionForm> */}
-            {mileageFrom.map(option => (
-              <OptionForm key={option} value={option}>
-                {option}
-              </OptionForm>
-            ))}
-          </SelectMileage>
-          <p className="text">To</p>
-          <SelectMileage
-            id="mileageTo"
-            name="mileageTo"
-            onChange={handleOnChangeFilter}
-          >
-            {/* <OptionForm value="">To</OptionForm> */}
-            {mileageTo.map(option => (
-              <OptionForm key={option} value={option}>
-                {option}
-              </OptionForm>
-            ))}
-          </SelectMileage>
-        </WrapMileage>
-      </FilterForm>
-      <button>Search</button>
+      <BtnClear onClick={clearFilter}>Reset</BtnClear>
     </FilterBar>
   );
 }
