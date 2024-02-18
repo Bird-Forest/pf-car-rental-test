@@ -1,23 +1,28 @@
 {
   "files": {
     "main.css": "/pf-car-rental-test/static/css/main.17fb153a.css",
-    "main.js": "/pf-car-rental-test/static/js/main.2a0e2beb.js",
-    "static/js/983.281c73e2.chunk.js": "/pf-car-rental-test/static/js/983.281c73e2.chunk.js",
-    "static/js/144.90fd8537.chunk.js": "/pf-car-rental-test/static/js/144.90fd8537.chunk.js",
-    "static/js/764.1d146c55.chunk.js": "/pf-car-rental-test/static/js/764.1d146c55.chunk.js",
-    "static/js/520.a12b8ccb.chunk.js": "/pf-car-rental-test/static/js/520.a12b8ccb.chunk.js",
+    "main.js": "/pf-car-rental-test/static/js/main.5df71c3a.js",
+    "static/js/131.09c658db.chunk.js": "/pf-car-rental-test/static/js/131.09c658db.chunk.js",
+    "static/js/144.8bb07e70.chunk.js": "/pf-car-rental-test/static/js/144.8bb07e70.chunk.js",
+    "static/js/764.a1da005c.chunk.js": "/pf-car-rental-test/static/js/764.a1da005c.chunk.js",
     "static/js/426.801850f4.chunk.js": "/pf-car-rental-test/static/js/426.801850f4.chunk.js",
+    "static/media/volvo1.jpg": "/pf-car-rental-test/static/media/volvo1.ec57415f16f4b4d27c35.jpg",
+    "static/media/lincoln1.jpg": "/pf-car-rental-test/static/media/lincoln1.44807d130e5261dfaa8e.jpg",
+    "static/media/infinity1.jpg": "/pf-car-rental-test/static/media/infinity1.164f30e12dc653b56582.jpg",
+    "static/media/pegot1.jpg": "/pf-car-rental-test/static/media/pegot1.a0eccd29b8000e0f680a.jpg",
+    "static/media/jaguar1.jpg": "/pf-car-rental-test/static/media/jaguar1.e2f3f9311c559811a4c1.jpg",
+    "static/media/audi2.jpg": "/pf-car-rental-test/static/media/audi2.dfcedd8640f64da13c12.jpg",
+    "static/media/car-rental.png": "/pf-car-rental-test/static/media/car-rental.49220822fe2b56e08d40.png",
     "index.html": "/pf-car-rental-test/index.html",
     "main.17fb153a.css.map": "/pf-car-rental-test/static/css/main.17fb153a.css.map",
-    "main.2a0e2beb.js.map": "/pf-car-rental-test/static/js/main.2a0e2beb.js.map",
-    "983.281c73e2.chunk.js.map": "/pf-car-rental-test/static/js/983.281c73e2.chunk.js.map",
-    "144.90fd8537.chunk.js.map": "/pf-car-rental-test/static/js/144.90fd8537.chunk.js.map",
-    "764.1d146c55.chunk.js.map": "/pf-car-rental-test/static/js/764.1d146c55.chunk.js.map",
-    "520.a12b8ccb.chunk.js.map": "/pf-car-rental-test/static/js/520.a12b8ccb.chunk.js.map",
+    "main.5df71c3a.js.map": "/pf-car-rental-test/static/js/main.5df71c3a.js.map",
+    "131.09c658db.chunk.js.map": "/pf-car-rental-test/static/js/131.09c658db.chunk.js.map",
+    "144.8bb07e70.chunk.js.map": "/pf-car-rental-test/static/js/144.8bb07e70.chunk.js.map",
+    "764.a1da005c.chunk.js.map": "/pf-car-rental-test/static/js/764.a1da005c.chunk.js.map",
     "426.801850f4.chunk.js.map": "/pf-car-rental-test/static/js/426.801850f4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17fb153a.css",
-    "static/js/main.2a0e2beb.js"
+    "static/js/main.5df71c3a.js"
   ]
 }
