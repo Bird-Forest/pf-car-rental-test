@@ -21,12 +21,9 @@ export default function CarPopUp({ item, onClose }) {
         onClose();
       }
     };
-    // document.body.style.overflow = 'visible';
-    // window.addEventListener('click', onClose);
     window.addEventListener('keydown', handleEscape);
 
     return () => {
-      // window.removeEventListener('click', onClose);
       window.removeEventListener('keydown', handleEscape);
     };
   }, [onClose]);

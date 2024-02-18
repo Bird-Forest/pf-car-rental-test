@@ -16,14 +16,6 @@ export const WrapAppBar = styled.div`
   width: 100%;
   margin: 0;
 `;
-export const WrapOutlet = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 92vh;
-  margin: 0;
-`;
 export const WrapNavigator = styled.div`
   display: flex;
   justify-content: space-between;
@@ -45,6 +37,20 @@ export const WrapNavigator = styled.div`
       color: rgb(11, 68, 205);
     }
   }
+`;
+export const WrapOutlet = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 92vh;
+  margin: 0;
+`;
+export const WrapFilterCatalog = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `;
 export const WrapNotFound = styled.div`
   display: flex;

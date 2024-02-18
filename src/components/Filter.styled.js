@@ -36,6 +36,9 @@ export const WrapSelect = styled.div`
   background: rgb(247, 247, 251);
   padding: 12px 18px 16px 18px;
   .text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 40px;
     height: 20px;
     font-family: 'Manrope';
@@ -43,7 +46,7 @@ export const WrapSelect = styled.div`
     font-weight: 500;
     line-height: 1.11;
     text-align: left;
-    padding: 4px 0 0 2px;
+    padding: 0;
     margin: 0;
   }
 `;
@@ -103,11 +106,11 @@ export const BtnClear = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 14px 44px 14px 44px;
+  padding: 10px 36px;
   color: rgb(255, 255, 255);
   font-family: ' Manrope';
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.42;
   border-radius: 12px;
   background-color: rgb(52, 112, 255);
